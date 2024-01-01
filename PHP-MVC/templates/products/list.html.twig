@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Nos produits - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+  <h1>Liste des produits</h1>
+
+  <h2>Sorties récentes</h2>
+
+  {% for product in products %}
+    <p>{{ product.format() }}</p>
+  {% else %}
+    <p>Aucun produit enregistré</p>
+  {% endfor %}
+{% endblock %}

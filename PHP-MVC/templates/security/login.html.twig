@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <h1>Login</h1>
+
+    <form action="/login/confirm" method="post">
+        {# Ajoutez ici les champs email et mot de passe du formulaire #}
+        <label for="username">Email :</label>
+        <input type="text" id="username" name="_username" required><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="_password" required><br>
+
+        <input type="submit" value="Se connecter">
+    </form>
+{% endblock %}
